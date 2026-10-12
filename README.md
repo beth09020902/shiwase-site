@@ -19,9 +19,11 @@ Do not link the staff ordering app (`order.shiwase.co.jp`) or the admin app (`ad
 
 ## Photos
 
-`images/raw/` was not in this repository, so food and shop photography is not included. Sections that need a photograph use a visible 「写真準備中」 placeholder. When source photos are available, add them under `images/raw/`, export WebP and JPEG at 640 / 1280 / 1920 pixels wide into `images/`, and reference them with `srcset`. Do not hotlink `shiwase.jp`.
+Originals from the GitHub upload live in `images/raw/`. The site uses a curated set, exported to `images/products/` as JPEG and WebP at 640px, 1280px, and up to 1920px wide. Pages reference them with `srcset`. The hero image is loaded immediately. Gallery images use `loading="lazy"`.
 
-`images/og.png` is a typographic sharing card, not a product photograph.
+There is still no photograph of the processing plant, the shops, or the workplace, so those sections keep a 「写真準備中」 placeholder. Duplicate angles and the お歳暮 graphic stay in `images/raw/` and are not on the page.
+
+`images/og.jpg` is a crop of the ham and bacon photograph.
 
 ## English later
 
