@@ -817,36 +817,71 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
-.store-photo {
+.store-photos {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.85rem 0 0;
+}
+
+.store-photo,
+.store-dish {
+  margin: 0;
+}
+
+.store-photo img,
+.store-dish img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.store-photo figcaption,
+.store-dish figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.store-dish-empty {
+  display: grid;
+  place-items: center;
+  min-height: 7.5rem;
+  padding: 0.8rem;
+  background: var(--paper-2);
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.store-dish-empty p {
+  margin: 0;
+}
+
+.store-book {
   margin: 0.85rem 0 0;
 }
 
 @media (max-width: 799px) {
-  .store:has(.store-photo) {
+  .store:has(.store-photos) {
     grid-template-areas:
       "photo"
       "index"
       "content";
   }
 
-  .store:has(.store-photo) .store-index {
+  .store:has(.store-photos) .store-index {
     grid-area: index;
   }
 
-  .store:has(.store-photo) > div {
+  .store:has(.store-photos) > div {
     grid-area: content;
   }
 
-  .store:has(.store-photo) .store-photo {
+  .store:has(.store-photos) .store-photos {
     grid-area: photo;
     margin: 0 0 0.85rem;
   }
-}
-
-.store-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 @media (min-width: 800px) {
@@ -857,16 +892,39 @@ a:hover {
     padding: 1.9rem 0;
   }
 
-  .store:has(.store-photo) {
+  .store:has(.store-photos) {
     grid-template-columns: 4.5rem minmax(0, 1fr) minmax(12rem, 18rem);
   }
 
-  .store-photo {
+  .store-photos {
     grid-column: 3;
     grid-row: 1 / span 3;
     margin: 0;
     align-self: start;
   }
+}
+
+.oseibo-banner {
+  background: var(--lacquer);
+  color: #fffaf6;
+}
+
+.oseibo-banner a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.1rem;
+  padding: 0.6rem 1rem;
+  color: #fffaf6;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.oseibo-banner a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .related {
