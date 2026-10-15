@@ -532,6 +532,18 @@ a:hover {
   aspect-ratio: 4 / 3;
 }
 
+.frame.frame-tall img,
+.shokudo-hero .frame-tall img {
+  aspect-ratio: auto;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.band-dark .frame figcaption {
+  color: rgba(247, 242, 234, 0.72);
+}
+
 .frame figcaption,
 .shot figcaption {
   padding: 0.55rem 0.1rem 0;
@@ -712,6 +724,11 @@ a:hover {
   aspect-ratio: 3 / 2;
 }
 
+.shot.shot-tall img {
+  aspect-ratio: 3 / 4;
+  object-position: center;
+}
+
 @media (min-width: 700px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -800,12 +817,55 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
+.store-photo {
+  margin: 0.85rem 0 0;
+}
+
+@media (max-width: 799px) {
+  .store:has(.store-photo) {
+    grid-template-areas:
+      "photo"
+      "index"
+      "content";
+  }
+
+  .store:has(.store-photo) .store-index {
+    grid-area: index;
+  }
+
+  .store:has(.store-photo) > div {
+    grid-area: content;
+  }
+
+  .store:has(.store-photo) .store-photo {
+    grid-area: photo;
+    margin: 0 0 0.85rem;
+  }
+}
+
+.store-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 @media (min-width: 800px) {
   .store {
     grid-template-columns: 4.5rem minmax(0, 1fr);
     gap: 0.4rem 1.75rem;
     align-items: start;
     padding: 1.9rem 0;
+  }
+
+  .store:has(.store-photo) {
+    grid-template-columns: 4.5rem minmax(0, 1fr) minmax(12rem, 18rem);
+  }
+
+  .store-photo {
+    grid-column: 3;
+    grid-row: 1 / span 3;
+    margin: 0;
+    align-self: start;
   }
 }
 
