@@ -1,0 +1,38 @@
+/* ==========================================================
+   志和勢 Shiwase — unified design tokens
+   FINAL: Option B (sumi / warm charcoal + washi + beni), chosen by Beth on 15 Oct 2026.
+   Shared by shiwase.co.jp (corporate) and shop.shiwase.co.jp (shop).
+   The old brown (#241812) and the navy (#1c3252) are retired.
+   ========================================================== */
+:root{
+  /* colour */
+  --c-primary:#2b2724;      /* 墨 sumi: header text, headings, dark bands */
+  --c-primary-deep:#1a1816; /* 深墨 deep sumi: util bar, footer, provenance band */
+  --c-overlay-rgb:26,24,22; /* deep sumi as RGB, for rgba() photo overlays */
+  --c-accent:#8e1b1f;       /* 紅 beni: primary CTA, sale, 熨斗 accent rule */
+  --c-accent-hover:#731519;
+  --c-gold:#a5854e;         /* 金 gold: hairlines, ◇ marks, eyebrows */
+  --c-gold-soft:#cdb88f;    /* light gold: accents on dark */
+  --c-paper:#fbf8f1;        /* 和紙 washi: cards, panels */
+  --c-bg:#f4f1ea;           /* page background */
+  --c-line:#ddd3c1;         /* paper rule */
+  --c-ink:#22201d;          /* body text */
+  --c-muted:#6f6a63;        /* secondary text */
+  --c-photo:#1d1c1f;        /* charcoal photo backdrop */
+  --c-on-dark:#fbf8f1;
+  --c-line-green:#06c755;   /* LINE brand button only */
+
+  /* type */
+  --f-serif:"Noto Serif JP","Noto Serif CJK JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-sans:"Noto Sans JP","Noto Sans CJK JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --fs-display:56px; --fs-h1:40px; --fs-h2:32px; --fs-h3:22px; --fs-h4:18px;
+  --fs-body:16px; --fs-small:14px; --fs-xs:12px; --fs-price:28px;
+  --lh-head:1.45; --lh-body:1.9;
+  --tr-head:.08em; --tr-eyebrow:.24em;
+
+  /* space (4px base) */
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:24px; --s-6:32px; --s-7:48px; --s-8:64px; --s-9:96px;
+  --container:1200px;
+  --radius:2px;
+  --shadow:0 1px 2px rgba(34,32,29,.06),0 8px 24px rgba(34,32,29,.06);
+}
