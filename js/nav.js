@@ -22,6 +22,6 @@
   });
 
   window.addEventListener("resize", function () {
-    if (window.matchMedia("(min-width: 768px)").matches) setOpen(false);
+    if (window.matchMedia("(min-width: 1120px)").matches) setOpen(false);
   });
 })();
