@@ -41,7 +41,7 @@
     <a class="mark" href="/"><i></i><b>志和勢</b><small>BUTCHERY KOBE</small></a>
     <nav id="site-nav" class="nav" aria-label="主要">
       <ul>
-        <li><a href="/">トップ</a></li><li><a href="/#products">志和勢の肉</a></li><li><a href="/business/">事業内容</a></li><li><a href="/stores/">店舗案内</a></li><li><a href="/shokudo/">食堂</a></li><li><a href="https://shop.shiwase.co.jp/oseibo/">ギフト</a></li><li><a href="/company/">会社概要</a></li><li><a href="/information/">お知らせ</a></li><li class="nav-contact"><a href="/contact/" aria-current="page">お問い合わせ</a></li>
+        <li><a href="/">トップ</a></li><li><a href="/#products">志和勢の肉</a></li><li><a href="/business/">事業内容</a></li><li><a href="/stores/">店舗案内</a></li><li><a href="/shokudo/">食堂</a></li><li><a href="https://shop.shiwase.co.jp/oseibo/">ギフト</a></li><li><a href="/company/">会社概要</a></li><li><a href="/information/">お知らせ</a></li><li><a href="/recruit/">採用情報</a></li><li class="nav-contact"><a href="/contact/" aria-current="page">お問い合わせ</a></li>
       </ul>
     </nav>
     <div class="hdr-cta">
@@ -77,6 +77,7 @@
           <label><input type="radio" name="inquiry" value="精肉店の食堂について" required>精肉店の食堂について</label>
           <label><input type="radio" name="inquiry" value="オンラインショップについて" required>オンラインショップについて</label>
           <label><input type="radio" name="inquiry" value="業務用・卸について" required>業務用・卸について</label>
+          <label><input type="radio" name="inquiry" value="求人への応募" required>求人への応募</label>
           <label><input type="radio" name="inquiry" value="その他" required>その他</label>
         </div>
       </fieldset>
@@ -123,6 +124,7 @@
     <li><a href="https://shop.shiwase.co.jp/oseibo/">ギフト（お歳暮）</a></li>
     <li><a href="/company/">会社概要</a></li>
     <li><a href="/information/">お知らせ</a></li>
+    <li><a href="/recruit/">採用情報</a></li>
     <li><a href="/contact/">お問い合わせ</a></li>
     <li><a href="/kodawari/">志和勢のこだわり</a></li>
     <li><a href="/wholesale/">業務用・卸</a></li>
@@ -139,6 +141,13 @@
   </div>
   <p class="copy">Copyright © 2026 株式会社志和勢神戸 All rights Reserved.</p>
 </div></footer>
+<script>
+(function () {
+  if (new URLSearchParams(location.search).get("type") !== "recruit") return;
+  var choice = document.querySelector('form[name="inquiry"] input[name="inquiry"][value="求人への応募"]');
+  if (choice) choice.checked = true;
+})();
+</script>
 <script src="/js/nav.js?v=20261015"></script>
 </body>
 </html>
