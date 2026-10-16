@@ -1,0 +1,19 @@
+# ---------------------------------------------------------------
+# COMING SOON MODE (until the full site launches, 25 Nov 2026).
+# LAUNCH DAY: delete this file and _headers, merge, trigger a build.
+# The full site is untouched in the repo; these rules only hide it.
+# ---------------------------------------------------------------
+
+# Files the coming soon page needs are served as normal.
+/coming-soon/*          /coming-soon/:splat          200!
+/css/*                  /css/:splat                  200!
+/images/*               /images/:splat               200!
+/favicon.svg            /favicon.svg                 200!
+/favicon.png            /favicon.png                 200!
+/apple-touch-icon.png   /apple-touch-icon.png        200!
+
+# The home page shows the coming soon page.
+/                       /coming-soon/index.html      200!
+
+# Every other path goes to the home page (temporary redirect).
+/*                      /coming-soon/                302!

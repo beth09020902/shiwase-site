@@ -1,0 +1,4 @@
+# COMING SOON MODE: keep every URL out of search engines until launch.
+# LAUNCH DAY: delete this file together with _redirects.
+/*
+  X-Robots-Tag: noindex, nofollow
